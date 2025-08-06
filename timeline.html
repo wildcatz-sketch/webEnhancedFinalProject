@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - Naruto's Epic Journey</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .timeline-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 0 30px;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 53, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-image {
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .timeline-year {
+            background: linear-gradient(45deg, #ff6b35, #4ade80);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .timeline-title {
+            color: #ff6b35;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .timeline-description {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .timeline-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .timeline-content {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">Naruto Fan Page</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html" class="active">Timeline</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 60vh;">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="TIMELINE">TIMELINE</h1>
+            <h2>Naruto's Epic Journey</h2>
+            <p>Follow the path from outcast to Hokage</p>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/young-naruto-uzumaki-render-png-41.png"
+                        alt="Young Naruto">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Childhood</div>
+                    <h3 class="timeline-title">The Outcast</h3>
+                    <p class="timeline-description">Naruto grows up alone in the Hidden Leaf Village, shunned by the
+                        villagers who fear the Nine-Tailed Fox sealed within him. Despite the loneliness, he dreams of
+                        becoming Hokage to gain recognition.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/team-7-formation-render-png-42.png"
+                        alt="Team 7 Formation">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Academy Days</div>
+                    <h3 class="timeline-title">Team 7 Formation</h3>
+                    <p class="timeline-description">Naruto graduates from the Ninja Academy and is placed on Team 7 with
+                        Sasuke Uchiha, Sakura Haruno, and their sensei Kakashi Hatake. This marks the beginning of his
+                        true ninja journey.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/zabuza-arc-bridge-battle-png-43.png"
+                        alt="Land of Waves">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">First Mission</div>
+                    <h3 class="timeline-title">Land of Waves Arc</h3>
+                    <p class="timeline-description">Team 7's first major mission takes them to the Land of Waves, where
+                        they face the demon of the mist, Zabuza, and his apprentice Haku. Naruto learns the true meaning
+                        of being a ninja.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/chunin-exams-forest-death-png-44.png"
+                        alt="Chunin Exams">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Genin</div>
+                    <h3 class="timeline-title">Chunin Exams</h3>
+                    <p class="timeline-description">The Chunin Exams test young ninjas' abilities. Naruto faces powerful
+                        opponents, learns new jutsu, and witnesses Sasuke's growing obsession with power after
+                        encountering Orochimaru.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/sasuke-retrieval-mission-png-45.png"
+                        alt="Sasuke Retrieval">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Betrayal</div>
+                    <h3 class="timeline-title">Sasuke's Departure</h3>
+                    <p class="timeline-description">Sasuke leaves the village to seek power from Orochimaru. Naruto
+                        leads a mission to bring him back, resulting in their first major battle at the Valley of the
+                        End.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/naruto-shippuden-training-sage-mode-png-46.png"
+                        alt="Training">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Time Skip</div>
+                    <h3 class="timeline-title">Training with Jiraiya</h3>
+                    <p class="timeline-description">Naruto spends two and a half years training with Jiraiya, one of the
+                        legendary Sannin. He returns to the village stronger and more mature, ready to face new
+                        challenges.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/akatsuki-organization-members-png-47.png"
+                        alt="Akatsuki">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Shippuden</div>
+                    <h3 class="timeline-title">Akatsuki Threat</h3>
+                    <p class="timeline-description">The criminal organization Akatsuki begins hunting tailed beasts.
+                        Naruto faces members of this dangerous group while searching for Sasuke and protecting his
+                        village.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/pain-assault-hidden-leaf-village-png-48.png"
+                        alt="Pain's Assault">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Crisis</div>
+                    <h3 class="timeline-title">Pain's Assault</h3>
+                    <p class="timeline-description">Pain attacks the Hidden Leaf Village, destroying it completely.
+                        Naruto returns to face Pain in an epic battle that tests his resolve and ninja way.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/fourth-great-ninja-war-alliance-png-49.png"
+                        alt="Fourth Ninja War">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">War</div>
+                    <h3 class="timeline-title">Fourth Great Ninja War</h3>
+                    <p class="timeline-description">The ninja world unites against the threat of the Ten-Tails and
+                        Madara Uchiha. Naruto plays a crucial role in the war, finally gaining the respect he always
+                        sought.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/naruto-hokage-ceremony-village-leader-png-50.png"
+                        alt="Hokage Ceremony">
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Achievement</div>
+                    <h3 class="timeline-title">Seventh Hokage</h3>
+                    <p class="timeline-description">Naruto's dream comes true as he becomes the Seventh Hokage of the
+                        Hidden Leaf Village. He now protects the village and works toward a peaceful ninja world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Naruto Universe</h4>
+                    <p>A tribute to Masashi Kishimoto's masterpiece and the ninja way that inspires millions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="characters.html">Characters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Naruto Universe Fan Page. This is a non-commercial tribute site.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const timelineItems = document.querySelectorAll('.timeline-content');
+            timelineItems.forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                item.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

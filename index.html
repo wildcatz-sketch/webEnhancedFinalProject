@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto Universe - The Ultimate Ninja World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">Naruto Fan Page</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="NARUTO FANPAGE">NARUTO Fan Page</h1>
+            <h2>The Ultimate Ninja World</h2>
+            <p>Journey through the epic tale of Naruto Uzumaki and discover the way of the ninja</p>
+            <a href="about.html" class="btn glow-btn">Explore The Story</a>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Discover the Ninja World</h2>
+            <div class="featured-content">
+                <div class="featured-image">
+                    <img src="https://www.freepnglogos.com/uploads/naruto-png/naruto-png-22.png" alt="Naruto Character">
+                </div>
+                <div class="featured-text">
+                    <div class="movie-meta">
+                        <span class="meta-item">720 Episodes</span>
+                        <span class="meta-item">72 Volumes</span>
+                        <span class="meta-item">15 Years</span>
+                    </div>
+                    <h3>The Legend of Naruto Uzumaki</h3>
+                    <p>Follow the incredible journey of a young ninja who dreams of becoming the strongest leader of his
+                        village. From an outcast to the greatest Hokage, Naruto's story is one of perseverance,
+                        friendship, and never giving up on your dreams.</p>
+                    <p>Experience epic battles, emotional moments, and the bonds that tie the ninja world together in
+                        this masterpiece by Masashi Kishimoto.</p>
+                    <a href="about.html" class="btn glow-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights-section">
+        <div class="container">
+            <h2 class="section-title">Explore the World</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-image"
+                        style="background-image: url('https://www.freepnglogos.com/uploads/naruto-png/image-naruto-with-coat-narutopedia-fandom-12.png');">
+                    </div>
+                    <div class="card-content">
+                        <h3>Epic Characters</h3>
+                        <p>Meet the legendary ninjas who shaped the Hidden Leaf Village and beyond.</p>
+                        <a href="characters.html" class="card-link">View Characters</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"
+                        style="background-image: url('https://www.freepnglogos.com/uploads/naruto-png/naruto-kombat-animes-agosto-5.png');">
+                    </div>
+                    <div class="card-content">
+                        <h3>Timeline Journey</h3>
+                        <p>Follow Naruto's incredible journey from outcast to the greatest Hokage.</p>
+                        <a href="timeline.html" class="card-link">Explore Timeline</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"
+                        style="background-image: url('https://www.freepnglogos.com/uploads/naruto-png/naruto-rasengan-ball-chakra-ninja-power-icon-32.png');">
+                    </div>
+                    <div class="card-content">
+                        <h3>Epic Battles</h3>
+                        <p>Experience the most intense and emotional battles that shaped the ninja world.</p>
+                        <a href="gallery.html" class="card-link">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Naruto Universe</h4>
+                    <p>A tribute to Masashi Kishimoto's masterpiece and the ninja way that inspires millions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="characters.html">Characters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Naruto Universe Fan Page. This is a non-commercial tribute site.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Smooth scrolling
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Naruto Universe loaded!');
+
+            // Card hover effects
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

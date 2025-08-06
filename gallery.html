@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Epic Moments & Battles</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            background: rgba(26, 26, 46, 0.8);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 107, 53, 0.5);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 107, 53, 0.8), rgba(74, 222, 128, 0.8));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-info {
+            padding: 25px;
+        }
+
+        .gallery-title {
+            color: #ff6b35;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .gallery-description {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .gallery-category {
+            background: linear-gradient(45deg, #ff6b35, #4ade80);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .video-gallery {
+            margin-top: 80px;
+        }
+
+        .video-item {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 107, 53, 0.9);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .video-item:hover .play-button {
+            background: rgba(255, 107, 53, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">Naruto Fan Page</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 60vh;">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="GALLERY">GALLERY</h1>
+            <h2>Epic Moments & Battles</h2>
+            <p>Witness the most iconic scenes from the ninja world</p>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Character Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/librachiousy-chibi-naruto-30.png"
+                            alt="Naruto Chibi">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Character</div>
+                        <h3 class="gallery-title">Chibi Naruto</h3>
+                        <p class="gallery-description">Adorable chibi version of our favorite ninja showing his cheerful
+                            personality.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/image-kunai-naruto-fictional-battle-omniverse-23.png"
+                            alt="Ninja Tools">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Weapons</div>
+                        <h3 class="gallery-title">Kunai & Shuriken</h3>
+                        <p class="gallery-description">Essential ninja tools used by shinobi for combat and utility
+                            purposes.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/wahdi-twenty-seven-kumpulan-anime-naruto-adobe-22.png"
+                            alt="Naruto Action">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Action</div>
+                        <h3 class="gallery-title">Battle Ready</h3>
+                        <p class="gallery-description">Naruto in his iconic battle stance, ready to protect his friends
+                            and village.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/naruto-rasengan-ball-chakra-ninja-power-icon-32.png"
+                            alt="Rasengan">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Jutsu</div>
+                        <h3 class="gallery-title">Rasengan</h3>
+                        <p class="gallery-description">Naruto's signature jutsu - a spinning ball of chakra with immense
+                            destructive power.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/naruto-akatsuki-logo-cloud-symbol-anime-manga-icon-6.png"
+                            alt="Akatsuki Cloud">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Symbol</div>
+                        <h3 class="gallery-title">Akatsuki Cloud</h3>
+                        <p class="gallery-description">The iconic red cloud symbol of the criminal organization
+                            Akatsuki.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/naruto-sage-mode-transformation-power-up-33.png"
+                            alt="Sage Mode">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Transformation</div>
+                        <h3 class="gallery-title">Sage Mode</h3>
+                        <p class="gallery-description">Naruto's powerful Sage Mode transformation, harnessing natural
+                            energy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-gallery">
+        <div class="container">
+            <h2 class="section-title">Epic Battle Videos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item video-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/naruto-vs-sasuke-final-battle-thumbnail-34.png"
+                            alt="Naruto vs Sasuke">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Epic Battle</div>
+                        <h3 class="gallery-title">Naruto vs Sasuke Final Battle</h3>
+                        <p class="gallery-description">The ultimate showdown between best friends at the Valley of the
+                            End.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item video-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/naruto-vs-pain-epic-fight-thumbnail-35.png"
+                            alt="Naruto vs Pain">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Epic Battle</div>
+                        <h3 class="gallery-title">Naruto vs Pain</h3>
+                        <p class="gallery-description">Naruto's heroic return to save the Hidden Leaf Village from
+                            destruction.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item video-item">
+                    <div class="gallery-image">
+                        <img src="https://www.freepnglogos.com/uploads/naruto-png/team-7-reunion-emotional-moment-36.png"
+                            alt="Team 7 Reunion">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-category">Emotional</div>
+                        <h3 class="gallery-title">Team 7 Reunion</h3>
+                        <p class="gallery-description">The emotional reunion of Team 7 after years of separation and
+                            conflict.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Naruto Universe</h4>
+                    <p>A tribute to Masashi Kishimoto's masterpiece and the ninja way that inspires millions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="characters.html">Characters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Naruto Universe Fan Page. This is a non-commercial tribute site.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                item.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Video play button click effect
+            const videoItems = document.querySelectorAll('.video-item');
+            videoItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    alert('Video would play here! (This is a demo)');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
